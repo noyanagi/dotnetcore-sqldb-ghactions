@@ -7,8 +7,8 @@ on:
     #    - '.github/workflows/infraworkflow.yml'
 
 permissions:
-  id-token: write
-  contents: read
+    id-token: write
+    contents: read
 
 env:
     AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID  }}    # set this to your Azure Subscription Id
