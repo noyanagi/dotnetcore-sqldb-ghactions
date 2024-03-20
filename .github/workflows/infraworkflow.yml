@@ -24,7 +24,7 @@ env:
 jobs:
     build-and-deploy-to-dev:
       runs-on: ubuntu-latest
-      environment: production
+      # environment: production
       steps:
                   
       # Please refer to https://github.com/Azure/login#configure-deployment-credentials for help on the Azure login action and setting up your secrets 
