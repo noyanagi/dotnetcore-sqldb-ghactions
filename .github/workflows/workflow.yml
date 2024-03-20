@@ -4,8 +4,8 @@ on:
   workflow_dispatch
 
 permissions:
-    id-token: write
-    contents: read
+  id-token: write
+  contents: read
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
