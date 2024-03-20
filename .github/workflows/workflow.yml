@@ -17,7 +17,7 @@ permissions:
 env:
   AZURE_WEBAPP_NAME: noya-webappsql-gh-actions-unique    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '8.0'           # set this to the dot net version to use
+  DOTNET_VERSION: '3.1'           # set this to the dot net version to use
   AZURE_RESOURCEGROUP_NAME: poc4-webapp-sql-github-actions # set this to your preferred resource group name
   SQLSERVER_NAME: noya-webappsql-gh-actions-srv                          # set this to your preferred sql server name
   DATABASE_NAME: noya-webappsql-gh-actions-db                   # set this to your preferred sql database name
@@ -70,7 +70,7 @@ jobs:
 
       - name: Update Database
         run: |
-          dotnet tool install --global dotnet-ef
+          dotnet tool install --global dotnet-ef --version 3.1
           dotnet ef database update
         env:
           ConnectionStrings__MyDbConnection: ${{ env.SQL_DB_CONN_STR }}
